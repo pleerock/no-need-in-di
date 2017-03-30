@@ -1,0 +1,20 @@
+{
+    "compilerOptions": {
+        "outDir": "build/compiled",
+        "target": "es5",
+        "lib": [
+            "es2015",
+            "es2016",
+            "dom"
+        ],
+        "module": "commonjs",
+        "moduleResolution": "node",
+        "emitDecoratorMetadata": true,
+        "experimentalDecorators": true,
+        "noImplicitAny": true
+    },
+    "exclude": [
+        "build",
+        "node_modules"
+    ]
+}

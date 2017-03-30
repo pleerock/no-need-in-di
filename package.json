@@ -1,0 +1,21 @@
+{
+  "name": "no-need-in-di",
+  "version": "1.0.0",
+  "description": "An example why there is no DI need in JavaScript/TypeScript.",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha ./build/compiled/test.js",
+    "test-alternative": "mocha ./build/compiled/test-alternative.js"
+  },
+  "author": "Umed Khudoiberdiev <zarrhost@gmail.com>",
+  "license": "ISC",
+  "devDependencies": {
+    "@types/chai": "^3.4.35",
+    "@types/mocha": "^2.2.40",
+    "@types/sinon": "^2.1.0",
+    "chai": "^3.5.0",
+    "mocha": "^3.2.0",
+    "sinon": "^2.1.0",
+    "typescript": "^2.2.2"
+  }
+}
