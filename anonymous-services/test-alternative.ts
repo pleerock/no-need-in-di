@@ -1,19 +1,22 @@
-import { PostController } from "./PostController";
-import { PostRepository } from "./PostRepository";
-import { expect } from "chai";
-import * as sinon from "sinon";
+import {PostController} from "./PostController";
+import {PostRepository} from "./PostRepository";
+import {expect} from "chai";
+import {MockerCollection} from "./test-utils";
 
-describe("test with mocked data", function () {
+describe("anonymous class service => with mocked data", function () {
+
+    const mockers = new MockerCollection();
     before(function () {
-        const stub = sinon.stub(PostRepository.constructor.prototype, "getList");
-        stub.returns([{
-            id: 1,
-            name: "Test"
-        }]);
+        mockers.create(PostRepository)
+               .stub("getList")
+               .returns([{
+                    id: 1,
+                    name: "Test"
+                }]);
     });
 
     after(function () {
-        PostRepository.constructor.prototype.getList.restore();
+        mockers.reset();
     });
 
     it("controller get action should return proper data", function () {
@@ -25,7 +28,7 @@ describe("test with mocked data", function () {
     });
 });
 
-describe("test without mocked data", function () {
+describe("anonymous class service => without mocked data", function () {
 
     it("controller get action should return proper data", function () {
         const controllerResult = PostController.get();

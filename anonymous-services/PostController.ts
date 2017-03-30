@@ -1,4 +1,4 @@
-import { PostRepository } from "./PostRepository";
+import {PostRepository} from "./PostRepository";
 
 export const PostController = new class {
 

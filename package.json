@@ -4,8 +4,9 @@
   "description": "An example why there is no DI need in JavaScript/TypeScript.",
   "main": "index.js",
   "scripts": {
-    "test": "mocha ./build/compiled/test.js",
-    "test-alternative": "mocha ./build/compiled/test-alternative.js"
+    "start": "node ./build/compiled/index.js",
+    "test": "mocha ./build/compiled/anonymous-services/test.js ./build/compiled/static-services/test.js",
+    "test-alternative": "mocha ./build/compiled/anonymous-services/test-alternative.js ./build/compiled/static-services/test-alternative.js"
   },
   "author": "Umed Khudoiberdiev <zarrhost@gmail.com>",
   "license": "ISC",
